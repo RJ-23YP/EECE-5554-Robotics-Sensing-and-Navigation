@@ -1,0 +1,9 @@
+I have completed the tasks assigned to me for the first week:
+i) I have installed Ubuntu 20.04 LTS on Oracle VM VirtualBox.
+ii) I have signed up and registered for Gitlab using my Husky credentials, as instructed by the professor and TAs. 
+I have also shared the Gitlab project invite link via email. 
+
+Something amusing to share:
+Got stuck in a revolving door at a departmental store recently. I was trying to tag along with my friend and my bag 
+got stucked between 2 doors. Was a little embarassing at that moment, but now I learned that only person steps in 
+those doors at a time while entering the store. 
