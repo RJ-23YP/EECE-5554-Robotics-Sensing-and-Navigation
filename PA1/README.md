@@ -7,5 +7,5 @@ Run the Publish file, & then run the Subscribe file to get the output.
 For Service and CLient:
 Run the Service file first, & then run the Client file and enter two numbers to get the output.
 
-The images folder contains the screenshots of the code which I executed as per above methodology.
+The images folder in the src contains the screenshots of the code which I executed as per above methodology.
 
