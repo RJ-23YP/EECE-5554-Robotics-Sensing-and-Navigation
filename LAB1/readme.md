@@ -22,7 +22,7 @@ This folder has the data collected for stationary and walking conditions in the 
 
 
 
-**/src/Analysis - Python scripts**
+**/src/Analysis - Python Scripts**
 
 Python code for analyzing and plotting the results obtained from the GPS sensor. 
 
