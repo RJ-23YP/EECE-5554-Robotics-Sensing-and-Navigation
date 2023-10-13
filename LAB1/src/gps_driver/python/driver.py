@@ -5,6 +5,7 @@ import utm
 import serial
 from gps_driver.msg import gps_msg
 from std_msgs.msg import String
+import sys
 
 def gps_driver_pub():
     
@@ -17,7 +18,10 @@ def gps_driver_pub():
     while not rospy.is_shutdown():
         '''In the line below, check the serial port of the GPS sensor in ROS using certain commands in linux terminal and 
         change the configurating settings in minicom, if the port number (USB0 in this case) has changed.'''
-        port = serial.Serial('/dev/ttyUSB0', 4800, timeout=3 )
+        port_name = sys.argv[1]
+        serialport = rospy.get_param('~port', port_name)
+        baud_rate = rospy.get_param('~baudrate', 4800)  
+        port = serial.Serial(serialport, baud_rate, timeout=3 )
         lbs = port.readline()
         
         line = str(lbs)
@@ -29,7 +33,7 @@ def gps_driver_pub():
             
             gpsread.header.seq+=1
             gpsread.header.stamp=rospy.Time.now()
-            gpsread.header.frame_id = "GPS1_frame"
+            gpsread.header.frame_id = "GPS1_Frame"
             
             latitude = float(split_line[2])
             latitude_DD = int(latitude/100)
@@ -50,6 +54,7 @@ def gps_driver_pub():
             newlatlong = utm.from_latlon(latitude_converted,longitude_converted)
 
             print(f'UTM_East, UTM_north, Zone, Letter: {newlatlong}')
+            print(line)
            
             gpsread.latitude = latitude_converted
             gpsread.longitude = longitude_converted
