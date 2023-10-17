@@ -1,0 +1,5 @@
+<launch>
+	<arg name = "port" default = "dev/ttyACM0"/>
+	<node name ="GPS_Pub" pkg ="gps_driver" type ="driver.py" args="$(arg port)" output="screen"></node>
+	<param name = "port" value="$(arg port)"/>
+</launch>
