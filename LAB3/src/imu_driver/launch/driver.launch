@@ -1,0 +1,4 @@
+<launch>
+	<arg name = "port" default = "dev/ttyUSB0"/>
+	<node name ="IMU_Pub" pkg ="imu_driver" type ="driver.py" args="$(arg port)" output="screen"></node>
+</launch>
