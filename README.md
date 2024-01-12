@@ -7,4 +7,5 @@ This is a systems level Robotics course which focusses on Sensing and Navigation
 Programming Languages: Python, MATLAB
 
 Software Packages: Robot Operating System (ROS)
+
 Libraries: OepnCV, Numpy, Matplotlib
