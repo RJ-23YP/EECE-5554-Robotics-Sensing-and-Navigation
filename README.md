@@ -5,5 +5,6 @@ This Github repo covers assignments and projects from the course of the same nam
 4. Simultaneous Localization and Mapping (SLAM)
 
 Programming Languages: Python, MATLAB
+
 Software Packages: Robot Operating System (ROS)
 Libraries: OepnCV, Numpy, Matplotlib
