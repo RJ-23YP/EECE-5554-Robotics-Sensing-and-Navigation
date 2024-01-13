@@ -1,0 +1,25 @@
+<launch>
+    <param name="/use_sim_time" value="true" />
+
+    <!-- Static Transformations -->
+    <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_base_link" args="0.0 0.0 0.33 0.0 0.0 0.0 1.0 base_footprint base_link 100" />
+    
+    <node pkg="tf" type="static_transform_publisher" name="cam_array_base_link_to_cam_0_link" args="0.0 0.0 0.0 0.0 0.0 0.0 1.0 cam_array_base_link cam_0_link 100" />
+    <node pkg="tf" type="static_transform_publisher" name="cam_0_link_to_cam_0_optical_frame" args="0.0 0.0 0.0 -0.5 0.5 -0.5 0.5 cam_0_link cam_0_optical_frame 100" />
+    <node pkg="tf" type="static_transform_publisher" name="cam_array_base_link_to_cam_1_link" args="0.0 -0.33 0.0 0.0 0.0 0.0 1.0 cam_array_base_link cam_1_link 100" />
+    <node pkg="tf" type="static_transform_publisher" name="cam_1_link_to_cam_1_optical_frame" args="0.0 0.0 0.0 -0.5 0.5 -0.5 0.5 cam_1_link cam_1_optical_frame 100" />
+    <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_cam_array_base_link" args="1.5 0.66 1.58 0.0 0.0 0.0 1.0 base_footprint cam_array_base_link 100" />
+
+    <node pkg="tf" type="static_transform_publisher" name="imu_base_link_tf" args="-0.15 -0.66 0.0 0 0 0 1 cam_array_base_link imu_base_link 100" />
+
+    <node pkg="tf" type="static_transform_publisher" name="imu_tf" args="0.0 0.0 0.0 1 0 0 -1.0341155355510722e-13 imu_base_link imu 100" />
+
+    <node pkg="tf" type="static_transform_publisher" name="vlp16_port_base_link_tf" args="-0.1 0.0 0.0623 0 0 0 1 cam_array_base_link vlp16_port_base_link 100" />
+
+    <node pkg="tf" type="static_transform_publisher" name="vlp16_port_tf" args="0.0 0.0 0.0377 0 0 0 1 vlp16_port_base_link vlp16_port 100" />
+
+    <node pkg="tf" type="static_transform_publisher" name="vlp16_starboard_base_link_tf" args="-0.1 -1.32 0.0623 0 0 0 1 cam_array_base_link vlp16_starboard_base_link 100" />
+    <node pkg="tf" type="static_transform_publisher" name="vlp16_starboard_tf" args="0.0 0.0 0.0377 0 0 0 1 vlp16_starboard_base_link vlp16_starboard 100" />
+
+
+</launch>
